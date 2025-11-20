@@ -85,6 +85,26 @@ npx prisma studio
 
 The Prisma schema is located in `packages/prisma/schema/schema.prisma`.
 
+### Environment Variables
+
+Before running the development servers, create the necessary environment files.
+
+Create a `.env` file in `apps/api/`:
+
+```env
+NODE_ENV=development
+PORT=3000
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/turbostarter?schema=public"
+```
+
+**Important**: You also need to create a `.env` file in `packages/prisma/` with the same `DATABASE_URL`:
+
+```env
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/turbostarter?schema=public"
+```
+
+The `DATABASE_URL` connects to the PostgreSQL container started with Docker Compose.
+
 ### Development
 
 Run all apps in development mode:
@@ -220,24 +240,6 @@ npm run test:cov --filter=api
 # Run e2e tests
 npm run test:e2e --filter=api
 ```
-
-## Environment Variables
-
-Create a `.env` file in `apps/api/`:
-
-```env
-NODE_ENV=development
-PORT=3000
-DATABASE_URL="postgresql://postgres:postgres@localhost:5432/turbostarter?schema=public"
-```
-
-**Important**: You also need to create a `.env` file in `packages/prisma/` with the same `DATABASE_URL`:
-
-```env
-DATABASE_URL="postgresql://postgres:postgres@localhost:5432/turbostarter?schema=public"
-```
-
-The `DATABASE_URL` connects to the PostgreSQL container started with Docker Compose.
 
 ## Troubleshooting
 
