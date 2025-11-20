@@ -85,6 +85,8 @@ npx prisma studio
 
 The Prisma schema is located in `packages/prisma/schema/schema.prisma`.
 
+> **Note**: During development, Prisma automatically watches for schema changes and regenerates the client. You don't need to manually run `npx prisma generate` after editing the schema - just save your changes and the client will update automatically.
+
 ### Environment Variables
 
 Before running the development servers, create the necessary environment files.
