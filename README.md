@@ -174,12 +174,12 @@ npm run start:prod --filter=api
 
 ## Why Vite with NestJS?
 
-Traditional NestJS development requires rebuilding on every change. This starter uses Vite to provide:
+Using Vite in this monorepo setup enables Just-in-Time (JIT) compilation for shared packages, eliminating the need to rebuild packages during development. This provides:
 
-- ⚡ Instant hot module replacement
-- 🎯 Fast startup times
-- 🔄 No build step during development
-- 📦 Optimized production builds
+- ⚡ Instant hot module replacement across the monorepo
+- 🎯 Fast startup times with JIT compilation
+- 🔄 No build step needed for packages during development
+- 📦 Seamless integration between apps and shared packages
 
 ## Scripts
 
