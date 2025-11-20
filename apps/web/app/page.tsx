@@ -1,41 +1,46 @@
+import { Button } from '@repo/ui/components/button';
+import { ModeToggle } from '../components/mode-toggle';
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <div className="flex items-center gap-3">
-          <div className="text-4xl">⚡</div>
-          <h1 className="text-2xl font-bold text-black dark:text-zinc-50">Turbo Starter</h1>
+    <div className="flex min-h-screen items-center justify-center font-sans">
+      <main className="relative flex min-h-screen w-full max-w-4xl flex-col items-center justify-center gap-16 px-6 py-16 sm:px-8">
+        <div className="absolute top-8 right-8">
+          <ModeToggle />
         </div>
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h2 className="max-w-md text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            Modern full-stack monorepo with NestJS & Next.js
-          </h2>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Blazing-fast development with NestJS + Vite for the API and Next.js for the frontend. Includes Prisma ORM,
-            PostgreSQL, and JIT compilation for shared packages.
-          </p>
-          <div className="flex flex-col gap-3 text-sm text-zinc-600 dark:text-zinc-400">
-            <div className="flex items-center gap-2">
-              <span className="font-semibold">API:</span>
-              <a href="http://localhost:3000" className="text-zinc-950 dark:text-zinc-50 hover:underline">
-                http://localhost:3000
+
+        <div className="flex flex-col items-center gap-8 text-center">
+          <div className="flex items-center gap-4">
+            <div className="text-5xl">⚡</div>
+            <h1 className="text-4xl font-bold tracking-tight">Turbo Starter</h1>
+          </div>
+
+          <div className="flex max-w-2xl flex-col gap-4">
+            <h2 className="text-2xl font-semibold text-muted-foreground">Modern full-stack monorepo starter</h2>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              Built with NestJS, Next.js, Prisma, and PostgreSQL. Features blazing-fast development with Vite HMR, JIT
+              compilation for shared packages, and Turborepo caching.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-3 text-sm">
+            <div className="flex items-center gap-2 rounded-lg border px-3 py-1.5">
+              <span className="font-medium">API:</span>
+              <a href="http://localhost:3000" className="hover:underline" target="_blank" rel="noopener noreferrer">
+                localhost:3000
               </a>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="font-semibold">Web:</span>
-              <a href="http://localhost:8000" className="text-zinc-950 dark:text-zinc-50 hover:underline">
-                http://localhost:8000
+            <div className="flex items-center gap-2 rounded-lg border px-3 py-1.5">
+              <span className="font-medium">Web:</span>
+              <a href="http://localhost:8000" className="hover:underline" target="_blank" rel="noopener noreferrer">
+                localhost:8000
               </a>
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-auto"
-            href="https://github.com/mrgmnn/turbo-starter"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+
+        <Button size="lg" asChild>
+          <a href="https://github.com/mrgmnn/turbo-starter" target="_blank" rel="noopener noreferrer">
             <svg className="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
               <path
                 fillRule="evenodd"
@@ -43,17 +48,9 @@ export default function Home() {
                 clipRule="evenodd"
               />
             </svg>
-            <span className="whitespace-nowrap">View on GitHub</span>
+            View on GitHub
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/8 px-5 transition-colors hover:border-transparent hover:bg-black/4 dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[180px]"
-            href="https://github.com/mrgmnn/turbo-starter#readme"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        </Button>
       </main>
     </div>
   );

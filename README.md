@@ -192,9 +192,24 @@ npm run start:prod --filter=api
 - **PostgreSQL** - Relational database
 - **TypeScript** - Type safety
 
+### Frontend (Web)
+
+- **Next.js** - React framework with App Router
+- **React 19** - Latest React with modern features
+- **Tailwind CSS v4** - Utility-first CSS framework
+- **shadcn/ui** - Re-usable component library
+- **next-themes** - Dark mode support
+
+### Shared Packages
+
+- **`@repo/ui`** - Shared UI component library with shadcn/ui components
+- **`@repo/prisma`** - Shared Prisma schema and client
+- **`@repo/eslint-config`** - Shared ESLint configurations
+- **`@repo/typescript-config`** - Shared TypeScript configurations
+
 ### Build System
 
-- **Turborepo** - High-performance build system
+- **Turborepo** - High-performance build system with caching
 - **ESLint** - Code linting
 - **Prettier** - Code formatting
 
@@ -303,9 +318,11 @@ npm install
 
 - [NestJS Documentation](https://docs.nestjs.com/)
 - [Next.js Documentation](https://nextjs.org/docs)
+- [shadcn/ui Documentation](https://ui.shadcn.com/)
 - [Turborepo Documentation](https://turborepo.com/docs)
 - [Vite Documentation](https://vitejs.dev/)
 - [Prisma Documentation](https://www.prisma.io/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [nodenv Documentation](https://github.com/nodenv/nodenv)
 
 ## License
