@@ -2,6 +2,8 @@
 
 A modern full-stack monorepo starter featuring NestJS API with Vite for fast development and Next.js for the frontend.
 
+![Turbo Starter](screenshot.png)
+
 ## Features
 
 - 🚀 **Fast Development** - NestJS with Vite for instant hot reload
