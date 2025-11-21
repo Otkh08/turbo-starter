@@ -22,90 +22,68 @@ A modern full-stack monorepo starter featuring NestJS API with Vite for fast dev
 - Docker and Docker Compose (for PostgreSQL database)
 - Git (for cloning the repository)
 
-### Installation
+### Installation & Setup
 
 ```sh
 # Clone the repository
 git clone https://github.com/mrgmnn/turbo-starter.git
 
-# Install dependencies
-npm install
+# Navigate to the project
+cd turbo-starter
+
+# Run bootstrap (installs dependencies and sets up database)
+npm run bootstrap
+# or use the shell script: ./scripts/bootstrap.sh
 ```
 
-### Database Setup
+The bootstrap process will:
 
-This project uses PostgreSQL with Prisma ORM.
+1. Install all npm dependencies
+2. Check if Docker is running and start PostgreSQL if needed
+3. Prompt for a project name (default: "turbo-starter")
+4. Update `package.json` with the project name
+5. Create the database (derived from project name)
+6. Generate and add `DATABASE_URL` to `.env` files in `apps/api/` and `packages/prisma/`
 
-#### Start PostgreSQL with Docker
+#### Next Steps
+
+After setup completes:
+
+1. **Define your database schema** in `packages/prisma/schema/schema.prisma`
+2. **Create and apply migrations** when ready: `npx prisma migrate dev --name init`
+3. **Start development**: `npm run dev`
+4. **View your data**: `npx prisma studio`
+
+> **Tip**: VS Code will prompt you to install recommended extensions for this project. Accept to get ESLint, Prettier, Prisma, Tailwind CSS IntelliSense, and more!
+
+#### Manual Setup (Alternative)
+
+If you prefer manual setup:
 
 ```sh
-# Start PostgreSQL container
+# Start PostgreSQL
 docker-compose up -d
 
-# Stop PostgreSQL container
-docker-compose down
+# Create database
+docker exec -it postgres psql -U postgres -c "CREATE DATABASE turbostarter;"
 
-# Stop and remove data
-docker-compose down -v
-```
-
-The PostgreSQL container runs on `localhost:5432` with:
-
-- **Database**: postgres
-- **User**: postgres
-- **Password**: postgres
-
-#### Create Demo Database
-
-For demo purposes, create a database called `turbostarter`:
-
-```sh
-# Connect to PostgreSQL container
-docker exec -it turbo-starter-postgres-1 psql -U postgres
-
-# Create the database
-CREATE DATABASE turbostarter;
-
-# Exit psql
-\q
-```
-
-#### Prisma Setup
-
-```sh
-# Generate Prisma Client
-npx prisma generate
+# Create .env files with DATABASE_URL in apps/api/ and packages/prisma/
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/turbostarter?schema=public"
 
 # Run migrations
 npx prisma migrate dev --name init
-
-# Open Prisma Studio (Database GUI)
-npx prisma studio
 ```
 
-The Prisma schema is located in `packages/prisma/schema/schema.prisma`.
+#### Useful Commands
 
-> **Note**: During development, Prisma automatically watches for schema changes and regenerates the client. You don't need to manually run `npx prisma generate` after editing the schema - just save your changes and the client will update automatically.
-
-### Environment Variables
-
-Before running the development servers, create the necessary environment files.
-
-Create a `.env` file in `apps/api/`:
-
-```env
-NODE_ENV=development
-PORT=3000
-DATABASE_URL="postgresql://postgres:postgres@localhost:5432/turbostarter?schema=public"
+```sh
+npx prisma studio          # Open Prisma Studio (Database GUI)
+npx prisma migrate dev     # Create and apply migrations
+docker-compose down        # Stop PostgreSQL
+docker-compose down -v     # Stop and remove data
 ```
 
-**Important**: You also need to create a `.env` file in `packages/prisma/` with the same `DATABASE_URL`:
-
-```env
-DATABASE_URL="postgresql://postgres:postgres@localhost:5432/turbostarter?schema=public"
-```
-
-The `DATABASE_URL` connects to the PostgreSQL container started with Docker Compose.
+> **Note**: During development, Prisma automatically watches for schema changes and regenerates the client. The schema is in `packages/prisma/schema/schema.prisma`.
 
 ### Development
 
