@@ -40,7 +40,7 @@ This is a modern full-stack monorepo starter built with Turborepo. It features:
 - Use App Router (not Pages Router)
 - Server Components by default, mark with `'use client'` when needed
 - Runs on port 8000 (not default 3000)
-- Use `next/font` for font optimization
+- Uses Fontsource for self-hosted fonts (not next/font)
 - Import shadcn components from `@repo/ui/components/*`
 
 #### Prisma
