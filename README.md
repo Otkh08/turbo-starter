@@ -62,7 +62,7 @@ If you prefer manual setup:
 
 ```sh
 # Start PostgreSQL
-docker-compose up -d
+docker compose up -d
 
 # Create database
 docker exec -it postgres psql -U postgres -c "CREATE DATABASE turbostarter;"
