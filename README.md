@@ -159,7 +159,6 @@ npm run start:prod --filter=api
 - **`web`**: [Next.js](https://nextjs.org/) web application with React 19, Tailwind CSS v4, and shadcn/ui
 - **`@repo/ui`**: Shared UI component library with shadcn/ui components
 - **`@repo/prisma`**: Prisma schema and generated client
-- **`@repo/prisma`**: Prisma schema and generated client
 - **`@repo/eslint-config`**: ESLint configurations
 - **`@repo/typescript-config`**: TypeScript configurations
 
